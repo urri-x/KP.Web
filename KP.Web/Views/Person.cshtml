@@ -1,0 +1,52 @@
+﻿@using System.Web
+@using KP.WebApi.Models
+@model Person
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    @*<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>*@
+    <script src="~/Scripts/jquery.min.js"></script>
+    <link rel="stylesheet" href="~/Styles/bootstrap.min.css">
+    <script src="~/Scripts/bootstrap.min.js"></script>    
+
+</head>
+<body>
+<h2>Сотрудник: @Model.Fio</h2>
+    <div style="width: 800px; margin-top: 20px;margin-left: 20px">
+        <form action='@ResolveUrl("~/Person/EditPerson")' method="post">
+            <div class="form-group row">
+                <label for="Surname" class="col-sm-2 form-control-label">Фамилия</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" id="Surname" name="SurnameRepository" placeholder="Фамилия">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="Name" class="col-sm-2 form-control-label">Имя</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" id="Name" name="Name" placeholder="Имя">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="Patronymic" class="col-sm-2 form-control-label">Отчество</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" id="Patronymic" name="Patronymic" placeholder="Отчество">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-primary">Нажать нежно</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

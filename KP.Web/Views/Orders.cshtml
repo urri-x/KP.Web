@@ -1,0 +1,66 @@
+﻿@using KP.WebApi.Models
+@using KP.WebApi.Models.Order
+@model IEnumerable<Order>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    @*<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>*@
+    <script src="~/Scripts/jquery.min.js"></script>
+    <link rel="stylesheet" href="~/Styles/bootstrap.min.css">
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <style>
+        .table > tbody > tr > td {
+            vertical-align: middle;
+        }
+    </style>
+    <script>
+        function OpenInNewTab(url) {
+            var win = window.open(url, '_blank');
+            win.focus();
+        }
+
+        function ShowOrder(id) {
+            OpenInNewTab('@ResolveUrl("~/Orders/ViewOrderInfo/")' + id);
+        }
+    </script>
+</head>
+<body>
+<h2>Утвержденные приказы</h2>
+<div>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th></th>
+            <th>№ приказа</th>
+            <th>Дата приказа</th>
+            <th>Тип</th>
+            <th>Описание</th>
+            <th>Дата утверждения</th>
+            <th>Пользователь</th>
+        </tr>
+        </thead>
+        @foreach (Order o in Model)
+        {
+            <tr>
+                <td><button title="Показать приказ" onclick='ShowOrder(@o.Id)' type="button" class="btn btn-default btn-sm btn-link glyphicon glyphicon-list"></button></td>
+                <td>@o.Number</td>
+                <td>@o.CreateDate.ToShortDateString() </td>
+                <td>@o.Type </td>
+                <td>@o.Description </td>
+                <td>@o.AcceptDate </td>
+                <td>@o.LastModifiedByUser </td>
+            </tr>
+        }
+    </table>
+</div>
+</body>
+</html>

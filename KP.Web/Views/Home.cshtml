@@ -1,0 +1,49 @@
+﻿@using KP.WebApi
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    @*<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>*@
+    
+    <script src="~/Scripts/jquery.min.js"></script>
+    <link rel="stylesheet" href="~/Styles/bootstrap.min.css">
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</head>
+<body>
+<div style="width: 600px;margin-top: 20px;margin-left: 20px">
+    <div class="page-header">
+        <h1>Приказы и оперативный контроль <small>(демо-версия)</small></h1>
+    </div>
+    
+    <div class="list-group ">
+        <a href='@ResolveUrl("~/Orders/ViewOrders")' class="list-group-item ">
+            <h4 class="list-group-item-heading ">Последние утвержденные приказы</h4>
+            <p class="list-group-item-text">Недавно утвержденные приказы, упорядоченные по дате и времени утверждения</p>
+        </a>
+    </div>
+    <div class="list-group">
+        <a href='@ResolveUrl("~/Orders/ViewShtatOrders")' class="list-group-item ">
+            <h4 class="list-group-item-heading ">Последние утвержденные приказы по штатному расписанию</h4>
+            <p class="list-group-item-text">Приказы о создании, расформировании и изменении объектов штатного расписания</p>
+        </a>
+    </div>
+    <div class="list-group">
+        <a href='@ResolveUrl("~/Rests/RestParams")' class="list-group-item ">
+            <h4 class="list-group-item-heading">Находящиеся в отпуске</h4>
+            <p class="list-group-item-text">Сотрудники, в данный момент находящиеся в отпуске</p>
+        </a>
+    </div>
+    @*<div class="list-group">
+        <a href='@ResolveUrl("~/Test/GetTests")' class="list-group-item ">
+            <h4 class="list-group-item-heading">Тесты</h4>
+            <p class="list-group-item-text">Тестируем тут</p>
+        </a>
+    </div>*@
+</div>
+</body>
+</html>

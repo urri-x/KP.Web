@@ -1,0 +1,47 @@
+﻿@using KP.WebApi.Models
+@model IEnumerable<PersonalRest>
+
+    @{
+        Layout = null;
+    }
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    @*<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>*@    
+    <script src="~/Scripts/jquery.min.js"></script>
+    <link rel="stylesheet" href="~/Styles/bootstrap.min.css">
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+    <title>Сотрудники, находящиеся в отпуске</title>
+</head>
+    <body>
+        <h2>Сотрудники, находящиеся в отпуске</h2>
+        <div>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <td>ТН</td>
+                        <td>ФИО</td>
+                        <td>Начало отпуска</td>
+                        <td>Окончание отпуска</td>
+                        <td>Тип отпуска</td>
+                    </tr>
+                </thead>
+                @foreach (PersonalRest o in Model)
+                {
+                    <tr>
+                        <td>@o.Tabn</td>
+                        <td>@o.Fio</td>
+                        <td>@o.RestDateBegin.ToShortDateString()</td>
+                        <td>@o.RestDateEnd.ToShortDateString()</td>
+                        <td>@o.RestType</td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </body>
+</html>

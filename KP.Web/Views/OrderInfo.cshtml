@@ -1,0 +1,81 @@
+﻿@using System.Linq
+@using System.Runtime.InteropServices
+@using KP.WebApi.Models.Order
+@model Order
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    @*<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>*@
+    <script src="~/Scripts/jquery.min.js"></script>
+    <link rel="stylesheet" href="~/Styles/bootstrap.min.css">
+    <script src="~/Scripts/bootstrap.min.js"></script>    
+    <style>
+        .table > tbody > tr > td {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+<h2>Приказ № @Model.Number @Model.Type</h2>
+<div>
+
+    <ul class="nav nav-tabs">
+        @{ long i = 0;}
+        @foreach (OrderPart part in Model.Parts.Where(x=>x.Visible))
+        {
+            if (i++ == 0)
+            {
+                <li class="active"><a data-toggle="tab" href="#Part_@part.Name"> @part.Caption</a></li>
+            }
+            else
+            {
+                <li><a data-toggle="tab" href="#Part_@part.Name"> @part.Caption</a></li>
+            }
+        }
+    </ul>
+
+    <div class="tab-content">
+        @{ i = 0;}
+        @foreach (OrderPart part in Model.Parts.Where(x=>x.Visible))
+        {
+            if (i++ == 0)
+            {
+               @:<div id="Part_@part.Name" class="tab-pane active">
+            }
+            else
+            {
+                @:<div id="Part_@part.Name" class="tab-pane">
+            }
+                <table class="table table-striped">
+                    <thead >
+                    <tr>
+                        @foreach (OrderField field in part.Fields)
+                        {
+                            <th>@field.Caption</th>
+                        }
+                    </tr>
+                    </thead>
+                    @foreach (OrderRecord record in part.Records.ToList())
+                    {
+                        <tr>
+                            @foreach (OrderField f in part.Fields)
+                            {
+                                 <td>@record[f.Name].Value</td>
+                            }
+                        </tr>
+                    }
+                </table>
+            @:</div>
+        }
+    </div>
+</div>
+</body>
+</html>

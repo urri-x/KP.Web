@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="KP" Class="KPDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=VM-KPDEV2;Initial Catalog=KP;Integrated Security=True" SettingsObjectName="KP.WebApi.Properties.Settings" SettingsPropertyName="KPConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.JRN_Orders" Member="JRN_Orders">
+    <Type Name="JRN_Order">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="number" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="id_OrderType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="date_begin" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="date_archive" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Note" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="id_folder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_tran" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_firm" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cmd_params" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="id_replaced" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_replacing" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastUpdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AcceptDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="additional_params" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+      <Column Name="LastModifiedUser" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="ObjName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ASysStoreItems" Member="ASysStoreItems">
+    <Type Name="ASysStoreItem">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Path" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="ItemName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.REC_View_StoreItem" Member="REC_View_StoreItems">
+    <Type Name="REC_View_StoreItem">
+      <Column Name="id1" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ItemName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.REF" Member="REFs">
+    <Type Name="REF">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ObjName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ShortName" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="FullName" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="StructureCode" Type="System.String" DbType="VarChar(850)" CanBeNull="true" />
+      <Column Name="brief" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="id_folder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SystemCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ParentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Cod" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ID_Rekv" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RelevanceCode" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.constlist_rekv" Member="constlist_rekvs">
+    <Type Name="constlist_rekv">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="object_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_AppObjRekv" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="charval" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="boolval" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="dateval" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="floatval" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="intval" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_tran" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastUpdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="intval2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PERSONAL_REST_TAKEN" Member="PERSONAL_REST_TAKENs">
+    <Type Name="PERSONAL_REST_TAKEN">
+      <Column Name="id1" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="length" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Period_Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="schedule_order_number" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="schedule_order_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="deliver_pf" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="order_number" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="order_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="id_band" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="date_begin" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="id_rest_taken_prolonged" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.objects" Member="objects">
+    <Type Name="object">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_type_object" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_tran" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dynamic_rekv" Member="dynamic_rekvs">
+    <Type Name="dynamic_rekv">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="object_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_AppObjRekv" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="date_begin" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="charval" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="boolval" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="dateval" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="floatval" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="intval" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_tran" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastUpdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="intval2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dynamiclist_rekv" Member="dynamiclist_rekvs">
+    <Type Name="dynamiclist_rekv">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="object_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_AppObjRekv" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="date_begin" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="date_end" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="charval" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="boolval" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="dateval" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="floatval" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="intval" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_tran" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastUpdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="intval2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.const_rekv" Member="const_rekvs">
+    <Type Name="const_rekv">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="object_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_AppObjRekv" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="charval" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="boolval" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="dateval" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="floatval" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="intval" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_tran" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastUpdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUpdateUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PERSONAL_REST" Member="PERSONAL_RESTs">
+    <Type Name="PERSONAL_REST">
+      <Column Name="id1" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="num_period" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mask" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="num_order" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="date_order" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="osn" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="Calendar" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Additional" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Sizeable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Depends" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Chain_Code" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="deliver_pf" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="id_work" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="length" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PERSONAL_EXECPOST" Member="PERSONAL_EXECPOSTs">
+    <Type Name="PERSONAL_EXECPOST">
+      <Column Name="id1" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="date_end" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="id_privatefaset2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_privatefaset3" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_privatefaset12" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="order_number" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="order_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="date_end_order_number" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="date_end_order_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="id_work" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_parent" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_type_execpost_add" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="release_reason_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="kzot_release_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="release_additionalreason_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tradeunion_decision_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="tradeunion_decision_number" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="workkind_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="temppost_date_end" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="temppost_personal_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_exec_previous" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="execpost_tabn" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TRANSFER_ADDITIONALREASON_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="REASONTRANSFER_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.rekvs" Member="rekvs">
+    <Type Name="rekv">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ObjTypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RekvName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JRN_Orders_Records" Member="JRN_Orders_Records">
+    <Type Name="JRN_Orders_Record">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_order" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PartName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JRN_Orders_Records_Values" Member="JRN_Orders_Records_Values">
+    <Type Name="JRN_Orders_Records_Value">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_record" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FieldName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="intval" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="boolval" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="dateval" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="charval" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="floatval" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="memoval" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+</Database>

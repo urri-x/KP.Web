@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClasses">
+  <DataContextMoniker Name="/KPDataContext" />
+  <nestedChildShapes>
+    <classShape Id="b465f515-6572-4cf7-a20e-6dc925859bc2" isExpanded="false" absoluteBounds="0.75, 0.75, 2, 0.44999999999999996">
+      <DataClassMoniker Name="/KPDataContext/JRN_Order" />
+      <nestedChildShapes>
+        <elementListCompartment Id="088bea8d-5ab7-4c9f-a695-67d8aa23d03b" absoluteBounds="0.76499999999999968, 1.21, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="105f05f2-ad9f-4cee-8889-b8f83f761bf6" isExpanded="false" absoluteBounds="0.75, 1.25, 2, 0.45000000000000018">
+      <DataClassMoniker Name="/KPDataContext/ASysStoreItem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dc89d8fb-0406-4ab4-8aa1-e1cee8a6f3ec" absoluteBounds="0.76500000000000012, 1.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="959851b3-0c56-4368-950d-57dbc03ce58e" isExpanded="false" absoluteBounds="0.75, 2.75, 2, 0.45000000000000018">
+      <DataClassMoniker Name="/KPDataContext/REC_View_StoreItem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="df07ee4e-197c-41a3-9608-2cdf46a3776d" absoluteBounds="0.76500000000000012, 3.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="846d4280-1d7f-4316-8137-01c335b24743" isExpanded="false" absoluteBounds="0.75, 3.25, 2, 0.45000000000000018">
+      <DataClassMoniker Name="/KPDataContext/REF" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2c00483f-35b8-4011-b03a-5c1f61311196" absoluteBounds="0.76500000000000012, 3.71, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e067c1cb-e9e2-4129-a3a0-e6760e257245" isExpanded="false" absoluteBounds="0.75, 1.75, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/KPDataContext/constlist_rekv" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4b8546e0-9d1c-4926-9048-25a290910176" absoluteBounds="0.76499999999999968, 2.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="61ccf474-2baa-43f6-b7cd-7f81b8637973" isExpanded="false" absoluteBounds="0.75, 3.75, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/KPDataContext/PERSONAL_REST_TAKEN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3ac51025-78b0-4359-9c8e-32b3853273c6" absoluteBounds="0.76499999999999968, 4.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8ea13ec2-1b97-4a90-9032-a4eaf9eb07dd" isExpanded="false" absoluteBounds="2.875, 0.75, 2, 0.45000000000000018">
+      <DataClassMoniker Name="/KPDataContext/object" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b3167353-2af4-4b49-9294-877a7fd14b74" absoluteBounds="2.8899999999999997, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7e460dc4-9c3a-42e7-9c95-0b8c956a6bfa" isExpanded="false" absoluteBounds="0.75, 6.75, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/KPDataContext/dynamic_rekv" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f309e6ae-ba7a-4cb9-9bc3-c4bf22b92aeb" absoluteBounds="0.76499999999999968, 7.21, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="29b91078-f756-45e9-a9ff-72fe358f03ec" isExpanded="false" absoluteBounds="2.875, 1.25, 2, 0.45000000000000018">
+      <DataClassMoniker Name="/KPDataContext/dynamiclist_rekv" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c52fe9ab-1a28-4e3e-8e05-80ec96925216" absoluteBounds="2.8899999999999997, 1.71, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8c3af8f0-5cb3-4b5b-b868-b86c2fc23475" isExpanded="false" absoluteBounds="3.75, 6.75, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/KPDataContext/const_rekv" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3e846339-bf13-4ce1-b4b6-86f0f7c29961" absoluteBounds="3.7649999999999997, 7.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1ba73611-0e39-4287-b450-ec5071984974" isExpanded="false" absoluteBounds="2.875, 1.75, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/KPDataContext/PERSONAL_REST" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0cd70d64-65b4-4d46-9f32-39aed1886221" absoluteBounds="2.8900000000000006, 2.21, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="aaaa508d-4f62-4b2b-91f3-24b249299ac2" isExpanded="false" absoluteBounds="2.875, 2.75, 2, 0.45">
+      <DataClassMoniker Name="/KPDataContext/PERSONAL_EXECPOST" />
+      <nestedChildShapes>
+        <elementListCompartment Id="aea9d3db-9160-4537-bc5a-ee11295a34fe" absoluteBounds="2.89, 3.21, 1.9700000000000002, 4.8646240234375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="adbcf1df-2937-4a5f-83fb-87c52e0638ac" isExpanded="false" absoluteBounds="2.875, 3.25, 2, 0.45">
+      <DataClassMoniker Name="/KPDataContext/rekv" />
+      <nestedChildShapes>
+        <elementListCompartment Id="96abfcdb-5308-44e5-96c6-5e4e6fa28f3b" absoluteBounds="2.89, 3.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="677ea3e6-5b3c-43d8-be12-dd12031d7bc9" isExpanded="false" absoluteBounds="3.5, 4.25, 2, 0.45">
+      <DataClassMoniker Name="/KPDataContext/JRN_Orders_Record" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8b487b89-b3ee-42f4-9007-71d1e2983efe" absoluteBounds="3.515, 4.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="56e6fccd-6ef7-426a-ba72-8c67707167cc" isExpanded="false" absoluteBounds="3.375, 4.75, 2, 0.45">
+      <DataClassMoniker Name="/KPDataContext/JRN_Orders_Records_Value" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7f154501-80bf-4929-b15a-cca226624b8b" absoluteBounds="3.39, 5.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
